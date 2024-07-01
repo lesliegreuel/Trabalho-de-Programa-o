@@ -1,0 +1,34 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+  <h1>{% block title %}Listagem de comidas{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  
+<p>
+    <a href="{{ url_for("form_adicionar_comida") }}">Cadastrar nova comida</a>
+</p>
+
+<table border="1">
+    <tr>
+        
+        <td>Nome</td>
+        <td>Marca</td>
+        <td>Valor</td>
+        <td>Validade</td>
+    </tr>
+
+    {% for p in comidas %}
+    <tr>
+
+        <td>{{p.nome}}</td>
+        <td>{{p.marca}}</td>
+        <td>{{p.valor}}</td>
+        <td>{{p.validade}}</td>
+    </tr>
+    {% endfor %}
+   
+</table>
+
+{% endblock %}

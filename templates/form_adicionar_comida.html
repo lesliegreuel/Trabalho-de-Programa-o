@@ -1,0 +1,26 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+<h1>{% block title %}Cadastrar comida{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="adicionar_comida">
+
+    <p>
+        Nome: <input type="text" name="nome" value="Batata">
+    </p>
+    <p>
+        Marca: <input type="text" name="marca" value="Lay`s">
+    </p>
+    <p>
+        Valor: <input type="text" name="valor" value="8,99">
+    </p>
+    <p>
+        Validade: <input type="text" name="validade" value="09/10/2024">
+    </p>
+    <button>Cadastrar</button>
+</form>
+
+{% endblock %}
