@@ -31,8 +31,3 @@ def adicionar_comida():
         c=Comida(**request.args)
         commit()
         return redirect("listar_comidas") 
-
-'''
-run:
-$ flask run
-'''
